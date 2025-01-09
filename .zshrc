@@ -128,8 +128,6 @@ convert_wav_to_mp3() {
   done
 }
 
-alias one-pass='echo -n "Y6krXmt\$UJBwEXQ" | pbcopy'
-alias one-pass-key='echo -n "A3-KRA5EB-RTQHQG-JZWYC-4W2ZD-Z3WJN-M3B6C" | pbcopy'
 
 awslogin (){
     /root/win-documents/Dev/scripts/aws_login.sh "@"
