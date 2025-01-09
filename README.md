@@ -1,2 +1,2 @@
-# Config Files
-All my config files bro
+# Dotfiles 
+All my dot files bro
