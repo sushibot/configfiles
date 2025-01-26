@@ -45,7 +45,7 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
@@ -65,6 +65,23 @@ vim.opt.softtabstop = 2
 -- Softwrap lines
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+-- Folding configuration
+vim.opt.foldcolumn = '0'
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+-- Limit height of completion windows.
+vim.opt.pumheight = 12
+
+-- Sets the characters used in LSP diagnostics.
+local signs = { Error = '', Warn = '', Hint = '', Info = '' }
+for type, icon in pairs(signs) do
+  local hl = 'DiagnosticSign' .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 -- Highlight searches. <Esc> in normal mode clears highlights.
 vim.opt.hlsearch = true
