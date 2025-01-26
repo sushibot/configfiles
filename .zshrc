@@ -2,8 +2,26 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+export PATH=$HOME/.dotnet/tools:$PATH
 export ZSH="/Users/sushibot/.oh-my-zsh"
+export EDITOR="/usr/local/bin/nvim"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# bun completions
+[ -s "/Users/sushibot/.bun/_bun" ] && source "/Users/sushibot/.bun/_bun"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/sushibot/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -98,25 +116,11 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 if [ -f ~/.aliases/system.sh ]; then
   source ~/.aliases/system.sh
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# bun completions
-[ -s "/Users/sushibot/.bun/_bun" ] && source "/Users/sushibot/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-
 eval "$(starship init zsh)"
-
 
 convert_wav_to_mp3() {
   INPUT_FOLDER="$1"
@@ -128,18 +132,6 @@ convert_wav_to_mp3() {
   done
 }
 
-
 awslogin (){
     /root/win-documents/Dev/scripts/aws_login.sh "@"
 }
-
-export AWS_PROFILE=spamanilla-dev # set aws cli to use my dev account by default, FOR NOW!!!!!!
-
-
-# pnpm
-export PNPM_HOME="/Users/sushibot/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
