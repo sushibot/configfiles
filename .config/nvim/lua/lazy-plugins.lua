@@ -5,12 +5,9 @@ require('lazy').setup({
   require('kickstart.plugins.indent_line'),
   require('kickstart.plugins.lint'),
   require('kickstart.plugins.telescope'),
+  require('kickstart.plugins.lspconfig'),
   require('custom.plugins.oil'),
   require('custom.plugins.peek'),
-  -- Here is a more advanced example where we pass configuration
-  -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
-  --    require('gitsigns').setup({ ... })
-  --
   {
     'christoomey/vim-tmux-navigator',
     lazy = false,

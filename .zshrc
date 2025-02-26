@@ -6,7 +6,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH=${PATH}:/usr/local/mysql/bin
 
-# Path to your oh-my-zsh installation.
 export PATH=$PATH:/usr/local/share/dotnet/dotnet
 
 # export PATH=$HOME/.dotnet/tools:$PATH
@@ -49,7 +48,6 @@ plugins=(git brew nvm zsh-autosuggestions web-search golang bun aws)
 
 source $ZSH/oh-my-zsh.sh
 
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -63,5 +61,3 @@ if [ -f ~/.aliases/system.sh ]; then
 fi
 
 eval "$(starship init zsh)"
-
-
