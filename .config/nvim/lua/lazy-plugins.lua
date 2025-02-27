@@ -8,6 +8,7 @@ require('lazy').setup({
   require('kickstart.plugins.lspconfig'),
   require('custom.plugins.oil'),
   require('custom.plugins.peek'),
+  require('custom.plugins.toggleterm'),
   {
     'christoomey/vim-tmux-navigator',
     lazy = false,

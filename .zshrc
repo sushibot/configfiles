@@ -34,14 +34,12 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-ZSH_THEME="af-magic"
+# ZSH_THEME="af-magic"
 
 # pyenv configuration
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
-ENABLE_CORRECTION="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
