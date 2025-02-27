@@ -45,7 +45,7 @@ ENABLE_CORRECTION="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git brew nvm web-search golang bun aws)
+plugins=(git zsh-autosuggestions brew nvm web-search golang bun aws)
 
 source $ZSH/oh-my-zsh.sh
 
