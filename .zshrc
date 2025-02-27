@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH=${PATH}:/usr/local/mysql/bin
 
@@ -15,6 +15,7 @@ export EDITOR="/usr/local/bin/nvim"
 
 export NVM_DIR="$HOME/.nvm"
 
+export RVM_PROMPT=0
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -44,7 +45,7 @@ ENABLE_CORRECTION="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git brew nvm zsh-autosuggestions web-search golang bun aws)
+plugins=(git brew nvm web-search golang bun aws)
 
 source $ZSH/oh-my-zsh.sh
 
