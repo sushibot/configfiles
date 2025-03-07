@@ -1,3 +1,5 @@
+command_timeout = 3600
+
 [aws]
 symbol = "  "
 
@@ -171,3 +173,4 @@ symbol = " "
 
 [gradle]
 symbol = " "
+
