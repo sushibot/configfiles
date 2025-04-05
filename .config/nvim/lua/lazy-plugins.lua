@@ -5,8 +5,11 @@ require('lazy').setup({
   require('kickstart.plugins.indent_line'),
   require('kickstart.plugins.lint'),
   require('kickstart.plugins.telescope'),
+  require('kickstart.plugins.treesitter'),
   require('kickstart.plugins.lspconfig'),
   require('custom.plugins.oil'),
+
+  require('custom.plugins.comments'),
   require('custom.plugins.peek'),
   require('custom.plugins.toggleterm'),
   {
